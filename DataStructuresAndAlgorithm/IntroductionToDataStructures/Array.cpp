@@ -42,7 +42,7 @@ int main(){
     int capacity=sizeof(array)/sizeof(array[0]);
     int n=6;
     
-    cout<<"Size of array"<<capacity<<endl;
+    cout<<"Size of array "<<capacity<<endl;
     int target;
     
     while(true){
