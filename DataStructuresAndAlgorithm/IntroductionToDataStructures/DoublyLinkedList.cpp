@@ -16,6 +16,7 @@ void insert(Node** head,int x){
     newNode->prev =NULL;
     if((*head) != NULL){
         (*head)->prev=newNode;
+        
     }
     *head=newNode;
 }
@@ -43,22 +44,23 @@ void insertEnd(Node** head,int x){
 
 
 void printNode(Node* node){
-    Node* last=new Node();
-    cout<<"Linked List"<<endl;
-    if(node->prev==NULL){
+    Node* newNode=node;
+    cout<<"Linked List: "<<endl;
+    if(newNode->prev==NULL){
         cout<<"NULL <-> ";
     }
-    while(node!=NULL){
-        cout<<node->data<<" <-> ";
-        last=node;
-        node=node->next;
+    while(newNode!=NULL){
+        cout<<newNode->data<<" <-> ";
+        newNode=newNode->next;
     }
-    if(node==NULL){
-        cout<<"NULL";
+    if(newNode==NULL){
+        cout<<" NULL";
     }
+
     cout<<endl;
 
 }
+
 
 
 int main(){
