@@ -1,1 +1,2 @@
-free(new_node1->next);
+
+    if((*head) != NULL){

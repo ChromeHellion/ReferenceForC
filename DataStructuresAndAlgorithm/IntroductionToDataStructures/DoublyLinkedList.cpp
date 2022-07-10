@@ -7,34 +7,39 @@ struct Node{
     Node* prev;
 };
 
-struct Node* getIntNode(int x){
-    Node* newNode = new Node();
-    newNode->data = x;
-    newNode->next =NULL;
-    newNode->prev =NULL;
-    return newNode;
-}
+
 
 void insert(Node** head,int x){
-    Node* newNode = getIntNode(x);
-    if(head == NULL){
-        *head=newNode;
-        return;
+    Node* newNode = new Node();
+    newNode->data = x;
+    newNode->next =(*head);
+    newNode->prev =NULL;
+    if((*head) != NULL){
+        (*head)->prev=newNode;
     }
-    *head->prev =newNode;
-    newNode->next =*head;
-    head=newNode;
+    *head=newNode;
 }
 
 
 void printNode(Node* node){
+    Node* last=new Node();
     cout<<"Linked List"<<endl;
+    if(node->prev==NULL){
+        cout<<"NULL <--> ";
+    }
     while(node!=NULL){
-        cout<<node->data;
+        cout<<node->data<<" <--> ";
+        last=node;
         node=node->next;
     }
+    if(node==NULL){
+        cout<<"NULL";
+    }
+    cout<<endl;
 
 }
+
+
 int main(){
     Node* head;
     head=NULL;
