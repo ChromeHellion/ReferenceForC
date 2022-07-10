@@ -1,2 +1,1 @@
-
-    if((*head) != NULL){
+print(top,array);
