@@ -82,4 +82,70 @@ using namespace std;
 
 /*-----------------LINKED LIST BASED IMPLENENTATION---------------*/
 
+struct Node
+{
+    int data;
+    Node *next;
+};
 
+Node* head=NULL;
+
+void push(int x){
+    Node* temp=new Node();
+    temp->data=x;
+    temp->next=head;
+    head=temp;
+
+}
+
+void pop(){
+    Node* temp=new Node();
+    if(head==NULL){
+        cout<<"Stack is empty"<<endl;
+        return;
+    }
+    temp=head;
+    head=temp->next;
+    free(temp);
+
+}
+bool isEmpty(){
+    if(head==NULL){
+        return true;
+    }
+
+    return false;
+}
+
+void top(){
+    cout<<head->data<<endl; 
+}
+
+void print(){
+    Node* temp1=new Node();
+    temp1=head;
+    while(temp1!=NULL){
+        cout<<temp1->data<<" ";
+        temp1=temp1->next;
+    }
+    cout<<endl;
+}
+int main(){
+    push(5);
+    print();
+    push(1);
+    print();
+    push(6);
+    print();
+    pop();
+    print();
+    pop();
+    print();
+    int y=isEmpty();
+    (y==true) ? cout<<"List is empty"<<endl :cout<<"List is not empty"<<endl;
+    top();
+    push(6);
+    top();
+    print();
+    
+}
