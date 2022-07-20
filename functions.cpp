@@ -162,13 +162,14 @@ int main(){
     int guessCount=8;
 
     while(secretNum!=guessNum){
-        cout<<"Enter the correct no: "<<endl;
-        cin>>guessNum;
-        --guessCount;
         if(guessCount==0){
             cout<<"You ran out of lives";
             break;
         }
+        cout<<"Enter the correct no: "<<endl;
+        cin>>guessNum;
+        --guessCount;
+        
 
         if(secretNum==guessNum)
         {
@@ -177,7 +178,7 @@ int main(){
         }
     }
 
-    
+    return 0;
 }
 
 */

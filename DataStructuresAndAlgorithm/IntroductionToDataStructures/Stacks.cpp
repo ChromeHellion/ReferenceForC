@@ -80,7 +80,7 @@ using namespace std;
 // }
 
 
-/*-----------------LINKED LIST BASED IMPLENENTATION---------------*/
+/*-----------------LINKED LIST BASED IMPLEMENTATION---------------*/
 
 struct Node
 {
