@@ -31,32 +31,32 @@ int main(){
 }
 */
 
-// void refreshForecast(map<string,int> forecastMap){
-//     while(true){
-//         for(auto& item : forecastMap){
-//             item.second++;
-//             cout<<item.first<<" - "<<item.second<<endl;
-//         }
-//         cout<<endl;
-//     this_thread::sleep_for(2000ms);
+void refreshForecast(map<string,int> forecastMap){
+    while(true){
+        for(auto& item : forecastMap){
+            item.second++;
+            cout<<item.first<<" - "<<item.second<<endl;
+        }
+        cout<<endl;
+    this_thread::sleep_for(2000ms);
 
-//     }
+    }
 
-// }
+}
 
-// int main(){
+int main(){
 
-//         map<string,int> forecastMap={
-//             {"Berlin",22},
-//             {"Mumbai",27},
-//             {"Singapore City",11},
-//             {"Beijing",44}
-//         };
+        map<string,int> forecastMap={
+            {"Berlin",22},
+            {"Mumbai",27},
+            {"Singapore City",11},
+            {"Beijing",44}
+        };
 
-//     thread bgWorker(refreshForecast,forecastMap);
+    thread bgWorker(refreshForecast,forecastMap);
 
-//     system("pause>null");
-// }
+    system("pause>null");
+}
 
 
 

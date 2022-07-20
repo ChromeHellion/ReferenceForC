@@ -6,6 +6,8 @@
         "istream": "cpp",
         "xstring": "cpp",
         "thread": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "map": "cpp",
+        "stack": "cpp"
     }
 }
