@@ -1,4 +1,3 @@
-
 #include<iostream>
 #include<map>
 #include<stack>
@@ -6,7 +5,7 @@
 #include<ctype.h>
 using namespace std;
 
-bool checkBalance(char *S){
+bool isCheckBalance(char *S){
     stack<char> temp;
     
 
@@ -36,7 +35,7 @@ int main(){
         cout<<"Enter to check if parenthesis is balanced or not: ";
         gets(expr);
         cout<<endl;
-        int x=checkBalance(expr);
+        bool x=isCheckBalance(expr);
         (x==true) ? cout<<"Expression is balanced"<<endl : cout<<"Expression is not balanced"<<endl;
     }
     return 0;

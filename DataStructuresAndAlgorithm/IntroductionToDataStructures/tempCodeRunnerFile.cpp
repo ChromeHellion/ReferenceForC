@@ -1,1 +1,1 @@
-C
+   cout<<"Output string is: "<<C;
